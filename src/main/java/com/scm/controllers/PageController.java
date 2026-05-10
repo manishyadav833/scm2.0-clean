@@ -120,7 +120,7 @@ public class PageController {
         user.setPassword(userForm.getPassword());
         user.setAbout(userForm.getAbout());
         user.setPhoneNumber(userForm.getPhoneNumber());
-        user.setEnabled(false);
+        user.setEnabled(true);
         user.setProfilePic("/images/my.jpeg");
 
         User savedUser = userService.saveUser(user);
