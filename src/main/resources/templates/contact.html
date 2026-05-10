@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html
+        lang="en"
+        th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+        xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Contact Us Page</title>
+</head>
+<body>
+<div id="content">
+        <h1>Contact Us 📩</h1>
+        <p>Have any questions? Feel free to reach out</p>
+
+        <div class="contact-container">
+
+            <!-- Left info -->
+            <div class="contact-info">
+                <h3>📍 Address</h3>
+                <p>Mahendergarh</p>
+
+                <h3>📧 Email</h3>
+                <p>manishyadav2007ab@gmail.com</p>
+
+                <h3>📞 Phone</h3>
+                <p>+91 99999 9999910</p>
+            </div>
+
+            <!-- Right form -->
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button>|<---Enter--->|🚀</button>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+    console.log("Home page");
+</script>
+</body>
+</html>

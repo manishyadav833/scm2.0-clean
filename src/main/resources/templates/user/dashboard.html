@@ -1,0 +1,181 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html-->
+<!--        lang="en"-->
+<!--        th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"-->
+<!--        xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <title data-th-text="${loggedInUser.name}+' |  Dashboard'">-->
+<!--        Profile Page-->
+<!--    </title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="content">-->
+<!--    &lt;!&ndash; sidebar &ndash;&gt;-->
+
+<!--    &lt;!&ndash; user is logged in : sidebar &ndash;&gt;-->
+<!--    <div style="padding:30px;">-->
+
+<!--        <h1 style="font-size:32px; margin-bottom:10px;">-->
+<!--            Welcome, Manish 👋-->
+<!--        </h1>-->
+
+<!--        <p style="color:gray; margin-bottom:20px;">-->
+<!--            Manage your contacts easily with SCM-->
+<!--        </p>-->
+
+<!--        &lt;!&ndash; CARDS &ndash;&gt;-->
+<!--        <div style="display:flex; gap:20px; flex-wrap:wrap;">-->
+
+<!--            <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--                <h3>Total Contacts</h3>-->
+<!--                <p style="font-size:24px; font-weight:bold;">3</p>-->
+<!--            </div>-->
+
+<!--            <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--                <h3>Favorites</h3>-->
+<!--                <p style="font-size:24px; font-weight:bold;">1</p>-->
+<!--            </div>-->
+
+<!--            <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--                <h3>Messages</h3>-->
+<!--                <p style="font-size:24px; font-weight:bold;">0</p>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    <div th:if="${loggedInUser}">-->
+<!--        <div data-th-replace="~{user/sidebar :: sidebar}"></div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    console.log("this is profile page");-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<div style="padding:30px;">-->
+
+<!--    <h1 style="font-size:32px; margin-bottom:10px;">-->
+<!--        Welcome, Manish 👋-->
+<!--    </h1>-->
+
+<!--    <p style="color:gray; margin-bottom:20px;">-->
+<!--        Manage your contacts easily with SCM-->
+<!--    </p>-->
+
+<!--    &lt;!&ndash; CARDS &ndash;&gt;-->
+<!--    <div style="display:flex; gap:20px; flex-wrap:wrap;">-->
+
+<!--        <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--            <h3>Total Contacts</h3>-->
+<!--            <p style="font-size:24px; font-weight:bold;">3</p>-->
+<!--        </div>-->
+
+<!--        <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--            <h3>Favorites</h3>-->
+<!--            <p style="font-size:24px; font-weight:bold;">1</p>-->
+<!--        </div>-->
+
+<!--        <div style="flex:1; min-width:200px; background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">-->
+<!--            <h3>Messages</h3>-->
+<!--            <p style="font-size:24px; font-weight:bold;">0</p>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+<!--</div>-->
+
+
+
+<div class="dashboard">
+
+    <h1>Welcome, Manish 👋</h1>
+    <p class="subtitle">Manage your contacts easily with SCM</p>
+
+    <div class="cards">
+
+        <div class="card blue">
+            <h3>Total Contacts</h3>
+            <p>3</p>
+        </div>
+
+        <div class="card green">
+            <h3>Favorites</h3>
+            <p>1</p>
+        </div>
+
+        <div class="card orange">
+            <h3>Messages</h3>
+            <p>0</p>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: linear-gradient(to right, #eef2ff, #f8fafc);
+    }
+
+    /* Main */
+    .dashboard {
+        padding: 30px;
+    }
+
+    .dashboard h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        color: gray;
+        margin-bottom: 25px;
+    }
+
+    /* Cards */
+    .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1;
+        min-width: 220px;
+        padding: 25px;
+        border-radius: 12px;
+        color: white;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Colors */
+    .blue {
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    }
+
+    .green {
+        background: linear-gradient(135deg, #10b981, #047857);
+    }
+
+    .orange {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 28px;
+        font-weight: bold;
+    }
+</style>
